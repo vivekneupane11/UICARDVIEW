@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+body{
+    font-family:'roboto slab';
+    margin:0;
+    padding:0;
+}
+
+.container{
+    position:relative;
+    width:1000px;
+    margin:70px auto 0;
+    height:auto;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 440px;
+    grid-gap:40px;
+
+}
+
+.container .card{
+    position:relative;
+    background:#000;
+    overflow:hidden;
+    border-radius:10px;
+    transition:0.5s;
+    justify-content: center;
+ 
+
+}
+.container .card .img-box img{
+    object-fit: cover;
+    width:100%;
+    height:440px;
+    background-size:cover;
+    padding:1px;
+  
+  
+}
+.container .card .img-box {
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    transition:0.5s;
+}
+
+
+.container .card .content{
+    position: absolute;
+    width:100%;
+    height:60%;
+    bottom:-100%;
+    padding:10px;
+    box-sizing: border-box;
+    text-align: center;
+    transition:0.5s;
+    
+}
+.container .card:hover .content{
+bottom:0;
+}
+.container .card:nth-child(1) .content{
+    background:linear-gradient(0deg,#c21833,transparent)
+}
+.container .card:nth-child(2) .content{
+    background:linear-gradient(0deg,#8012a5,transparent)
+}
+.container .card:nth-child(3) .content{
+    background:linear-gradient(0deg,#3a414c,transparent)
+}
+
+.container .card .content h2{
+    margin:0 0 10px;
+    padding:0;
+    color:#fff;
+    font-size:30px;
+}
+
+.container .card .content h2 span{
+    color:#ffeb3b;
+    font-size:20px;
+
+}
+
+.container .card .content p{
+    margin:0;
+    padding:0;
+    color:#fff;
+    font-size:16px;
+}
+.container .card .content ul {
+    display:flex;
+    padding:2px;
+    align-items: center;
+    justify-content: center;
+}
+.container .card .content ul li{
+    list-style: none;
+    margin:10px;
+}
+.container .card .content ul li a{
+    color:white;
+    padding:1px;
+    font-size: 18px;
+    transition:0.5s;
+}
+
+.container .card:hover{
+    transform: translateY(-20px);
+    box-shadow:0 20px 20px rgba(0,0,0,0.2);
+}
